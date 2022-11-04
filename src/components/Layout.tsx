@@ -9,7 +9,7 @@ const Layout = ({
   children: ReactNode;
   title: string;
 }) => (
-  <div>
+  <div className="bg-black">
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
