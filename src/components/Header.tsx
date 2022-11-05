@@ -3,7 +3,7 @@ import mintHeaderDesktop from '../../public/header-mint-desktop.gif';
 
 export default function Header() {
   return (
-    <div className=" bg-black flex text-lg sticky top-6 w-full items-center justify-center h-[64px] md:h-[80px] z-30">
+    <div className=" bg-black flex text-lg sticky top-0 pt-6 w-full items-center justify-center h-[64px] md:h-[80px] z-30">
       <div className="flex pl-10 left-0 absolute gap-4 justify-start ">
         <a href="https://twitter.com/RARITOS_FAMILY" target="_blank rel" rel="noopener noreferrer">
           <div className="font-primary">Twitter</div>
