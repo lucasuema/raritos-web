@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
-
 import Head from 'next/head';
+import Image from 'next/image';
+import metatagImage from '../../public/metatagImage.png';
 
 const Layout = ({
   children,
@@ -16,12 +17,14 @@ const Layout = ({
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta
         property="og:description"
-        content="Experimenting with the web and metaverse"
+        content="👹 How How many times people called you a weirdo? They don’t know they are raritos too. We
+        are special, we are unique. 7471 randomly generated with the same DNA. Minting a Rarito
+        is a celebration of your inner weirdness."
         key="ogdesc"
       />
       <meta
         property="og:image"
-        content="https://dtqueiuscymwbtbwincx.supabase.co/storage/v1/object/public/ecoterreans-metatag/meta-tag-image.png?t=2022-09-30T17%3A46%3A06.794Z"
+        content="https://dtqueiuscymwbtbwincx.supabase.co/storage/v1/object/public/raritos/metatagImage.png"
         key="ogimage"
       />
     </Head>
