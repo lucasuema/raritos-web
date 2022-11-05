@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      primary: ['Pangolin', 'sans-serif'],
+    },
   },
   plugins: [],
 };

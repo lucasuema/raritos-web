@@ -6,3 +6,12 @@ body {
   background-color: #000000;
   color: aliceblue;
 }
+
+@font-face {
+  font-family: 'Pangolin';
+  src: url('/Pangolin-Regular.woff2') format('woff2'),
+    url('/fonts/Pangolin-Regular.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  color: white;
+}
