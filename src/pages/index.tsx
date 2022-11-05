@@ -7,8 +7,8 @@ const IndexPage = () => {
 
   return (
     <Layout title="The Raritos">
-      <div className="flex flex-col h-screen bg-black ">
-        <div className=" flex flex-col flex-1 mt-[50%] sm:mt-[15%] justify-center items-center text-center overflow-clip">
+      <div className="flex flex-col h-screen w-screen bg-black ">
+        <div className=" flex flex-col flex-1 justify-center items-center text-center overflow-clip">
           <h1 className="text-5xl text-white font-bold ">The raritos 👹</h1>
           <div className="px-10 pt-10 text-white md:max-w-lg">7471 PFPs coming soon...👀</div>
           <div className="flex w-64 justify-center gap-5 pt-10">
