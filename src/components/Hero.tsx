@@ -6,8 +6,8 @@ import three from '../../public/three.png';
 import four from '../../public/four.png';
 import five from '../../public/five.png';
 import circularText from '../../public/circular-text.svg';
-
-import mintHeaderDesktop from '../../public/header-mint-desktop.gif';
+import cta from '../../public/cta.gif';
+import ctaMobile from '../../public/cta-mobile.gif';
 
 const Hero = () => {
   return (
@@ -25,7 +25,7 @@ const Hero = () => {
           <Image src={two} alt="Center Image" />
           <Image src={three} alt="Center Image" />
         </div>
-        <div className=" absolute w-[200px] h-[200px] left-12 bottom-[35%] hidden xl:block animate-[spin_30s_linear_infinite]">
+        <div className=" absolute w-[200px] h-[200px] left-12 bottom-[35%] hidden xl:block animate-[spin_5s_linear_infinite]">
           <Image src={circularText} alt="Center Image" />
         </div>
         <div className="px-10 pt-10 text-white md:max-w-[700px] text-[25px] font-primary">
@@ -33,11 +33,15 @@ const Hero = () => {
           special, we are unique. 7471 randomly generated with the same DNA. Minting a Rarito is a
           celebration of your inner weirdness.
         </div>
-        <div className="text-lg mt-8 text-white w-[180px] h-[50px] flex items-center justify-center text-center">
-          <Image src={mintHeaderDesktop} alt="Center Image" />
-          <div className="absolute font-primary ">Connect wallet</div>
+        <div className="text-lg  hidden md:flex mt-8 text-white w-[260px] md:w-[560px] md:h-[63px] items-center justify-center text-center">
+          <Image src={cta} alt="Center Image" />
+          <div className="absolute font-primary text-[25px] ">Connect wallet</div>
         </div>
-        <div className="flex w-64 justify-center gap-5 pt-10"></div>
+        <div className="text-lg md:hidden flex mt-8 text-white w-[260px] md:w-[560px] md:h-[63px] items-center justify-center text-center">
+          <Image src={ctaMobile} alt="Center Image" />
+          <div className="absolute font-primary text-[25px] ">Connect wallet</div>
+        </div>
+        <div className="flex w-64 justify-center gap-5 pt-6 md:pt-4"></div>
         <div className=" font-primary ">Mint @ ETH 0.0045</div>
       </div>
     </div>
