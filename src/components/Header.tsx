@@ -3,7 +3,7 @@ import twitterOnHover from '../../public/twitter-onHover.svg';
 
 export default function Header() {
   return (
-    <div className=" bg-black flex text-lg sticky top-0 pt-12 w-full items-center justify-center h-[64px] md:h-[80px] z-30">
+    <div className=" bg-black flex text-lg sticky top-0 w-full items-center justify-center h-[86px] md:h-[102px] z-30">
       <div className=" p-2 sm:p-0 text-[45px] md:text-[90px] font-primary flex md:justify-center w-full pl-8 md:pl-0  ">
         The Raritos
       </div>
