@@ -23,7 +23,7 @@
     "react-dom": "17.0.2",
     "sass": "^1.43.4",
     "sharp": "^0.29.1",
-    "wagmi": "^0.7.15"
+    "wagmi": "^0.8.3"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.16.0",
