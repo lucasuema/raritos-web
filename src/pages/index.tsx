@@ -4,8 +4,7 @@ import Header from 'src/components/Header';
 import Hero from 'src/components/Hero';
 import Footer from 'src/components/Footer';
 
-// import '@rainbow-me/rainbowkit/styles.css';
-import '@rainbow-me/rainbowkit/dist/index.css';
+import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
