@@ -7,7 +7,7 @@ import four from '../../public/four.png';
 import five from '../../public/five.png';
 import circularText from '../../public/circular-text.svg';
 import cta from '../../public/cta.gif';
-import ctaMobile from '../../public/cta-mobile.gif';
+import ConnectWalletButton from './ConnectWalletButton';
 
 const Hero = () => {
   return (
@@ -34,12 +34,10 @@ const Hero = () => {
           celebration of your inner weirdness.
         </div>
         <div className="text-lg  hidden md:flex mt-8 text-white w-[260px] md:w-[560px] md:h-[63px] items-center justify-center text-center">
-          <Image src={cta} alt="Center Image" />
-          <div className="absolute font-primary text-[25px] ">Connect wallet</div>
+          <ConnectWalletButton />
         </div>
         <div className="text-lg md:hidden flex mt-8 text-white w-[260px] md:w-[560px] md:h-[63px] items-center justify-center text-center">
-          <Image src={ctaMobile} alt="Center Image" />
-          <div className="absolute font-primary text-[25px] ">Connect wallet</div>
+          <ConnectWalletButton />
         </div>
         <div className="flex w-64 justify-center gap-5 pt-6 md:pt-4"></div>
         <div className=" font-primary ">Mint @ ETH 0.0045</div>
