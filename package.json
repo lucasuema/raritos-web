@@ -2,7 +2,7 @@
   "name": "front-end-jsx-template",
   "private": true,
   "engines": {
-    "node": "16.x"
+    "yarn": "0.23.2"
   },
   "scripts": {
     "dev": "next dev",
