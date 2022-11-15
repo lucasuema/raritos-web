@@ -5,13 +5,13 @@ import Hero from 'src/components/Hero';
 import Footer from 'src/components/Footer';
 
 import '@rainbow-me/rainbowkit/styles.css';
-import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { darkTheme, getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
 const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
+  [chain.mainnet],
   [alchemyProvider({ apiKey: process.env.ALCHEMY_ID as any }), publicProvider()],
 );
 
@@ -29,7 +29,11 @@ const wagmiClient = createClient({
 const IndexPage = () => {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider
+        modalSize="compact"
+        theme={darkTheme({ accentColor: '#FBFF00', accentColorForeground: 'black' })}
+        chains={chains}
+      >
         <Layout title="The Raritos">
           <Header />
           <Hero />
