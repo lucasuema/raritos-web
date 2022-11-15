@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import Layout from '../components/Layout';
 import Header from 'src/components/Header';
 import Hero from 'src/components/Hero';
@@ -6,12 +6,23 @@ import Footer from 'src/components/Footer';
 
 import '@rainbow-me/rainbowkit/styles.css';
 import { darkTheme, getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
-import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
+import {
+  chain,
+  configureChains,
+  createClient,
+  WagmiConfig,
+  useAccount,
+  useSigner,
+  useContract,
+  useContractWrite,
+  usePrepareContractWrite,
+} from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
+import raritosAbi from '../contract/raritos.json';
 
 const { chains, provider } = configureChains(
-  [chain.mainnet],
+  [chain.goerli],
   [alchemyProvider({ apiKey: process.env.ALCHEMY_ID as any }), publicProvider()],
 );
 
