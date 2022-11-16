@@ -6,24 +6,14 @@ import Footer from 'src/components/Footer';
 
 import '@rainbow-me/rainbowkit/styles.css';
 import { darkTheme, getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
-import {
-  chain,
-  configureChains,
-  createClient,
-  WagmiConfig,
-  useAccount,
-  useSigner,
-  useContract,
-  useContractWrite,
-  usePrepareContractWrite,
-} from 'wagmi';
+import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import raritosAbi from '../contract/raritos.json';
 
 const { chains, provider } = configureChains(
   [chain.goerli],
-  [alchemyProvider({ apiKey: process.env.ALCHEMY_ID as any }), publicProvider()],
+  [alchemyProvider({ apiKey: 'AXt7pgHlkPTYIdhiuwZQrJTdWIfFEUN0' }), publicProvider()],
 );
 
 const { connectors } = getDefaultWallets({

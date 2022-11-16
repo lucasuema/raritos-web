@@ -1,25 +1,32 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ethers } from 'ethers';
-
-import { useAccount, useContractWrite, usePrepareContractWrite } from 'wagmi';
-import raritosAbi from '../contract/raritos.json';
+import { useEffect } from 'react';
+import { useAccount, useContractRead, useContractWrite, usePrepareContractWrite } from 'wagmi';
+import raritos from '../contract/raritos.json';
 
 const ConnectWalletButton = () => {
   const { address, isConnected } = useAccount();
 
-  const { config } = usePrepareContractWrite({
+  // const { config } = usePrepareContractWrite({
+  //   address: '0x196FB2b4A17CC3D03212eDC371bda34dD2CDAAAd',
+  //   abi: [raritos],
+  //   functionName: 'mint',
+  //   args: ['0xd2D568B166e05C4aBbEf64f77eb65466E2195050', 50000],
+  // });
+
+  const { data: symbol } = useContractRead({
     address: '0x196FB2b4A17CC3D03212eDC371bda34dD2CDAAAd',
-    abi: raritosAbi,
-    functionName: 'mint',
-    overrides: {
-      from: address,
-      value: 5000000000000000,
-    },
+    abi: raritos,
+    functionName: 'symbol',
   });
 
-  const { write: mint, isSuccess } = useContractWrite(config);
+  useEffect(() => {
+    console.log('symbol', symbol);
+  }, [symbol]);
 
-  console.log(config);
+  // const { write: mint, isSuccess } = useContractWrite(config);
+
+  // console.log(config);
 
   return (
     <div>
@@ -27,7 +34,7 @@ const ConnectWalletButton = () => {
         <button
           className="bg-red-500"
           onClick={() => {
-            mint?.();
+            // mint?.();
           }}
         >
           Mint
