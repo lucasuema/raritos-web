@@ -7,36 +7,36 @@ import raritos from '../contract/raritos.json';
 const ConnectWalletButton = () => {
   const { address, isConnected } = useAccount();
 
-  // const { config } = usePrepareContractWrite({
-  //   address: '0x196FB2b4A17CC3D03212eDC371bda34dD2CDAAAd',
-  //   abi: [raritos],
-  //   functionName: 'mint',
-  //   args: ['0xd2D568B166e05C4aBbEf64f77eb65466E2195050', 50000],
-  // });
-
-  const { data: symbol } = useContractRead({
+  // Here we get the price of the NFT
+  const { data: cost } = useContractRead({
     address: '0x196FB2b4A17CC3D03212eDC371bda34dD2CDAAAd',
     abi: raritos,
-    functionName: 'symbol',
+    functionName: 'cost',
   });
 
-  useEffect(() => {
-    console.log('symbol', symbol);
-  }, [symbol]);
+  const { config } = usePrepareContractWrite({
+    address: '0x196FB2b4A17CC3D03212eDC371bda34dD2CDAAAd',
+    abi: raritos,
+    functionName: 'mint',
+    args: [address, { value: Number(cost).toString() }],
+  });
 
-  // const { write: mint, isSuccess } = useContractWrite(config);
+  const { writeAsync } = useContractWrite(config);
+
+  const onMintClick = async () => {
+    try {
+      await writeAsync?.();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   // console.log(config);
 
   return (
     <div>
       {isConnected ? (
-        <button
-          className="bg-red-500"
-          onClick={() => {
-            // mint?.();
-          }}
-        >
+        <button className="bg-red-500" onClick={onMintClick}>
           Mint
         </button>
       ) : (
