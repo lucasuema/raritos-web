@@ -1,6 +1,5 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ethers } from 'ethers';
-import { useEffect } from 'react';
 import { useAccount, useContractRead, useContractWrite, usePrepareContractWrite } from 'wagmi';
 import raritos from '../contract/raritos.json';
 
@@ -18,20 +17,23 @@ const ConnectWalletButton = () => {
     address: '0x196FB2b4A17CC3D03212eDC371bda34dD2CDAAAd',
     abi: raritos,
     functionName: 'mint',
-    args: [address, { value: Number(cost).toString() }],
+    args: [address, 1],
+    overrides: {
+      from: address,
+      value: ethers.utils.parseEther('0.05'),
+    },
   });
 
   const { writeAsync } = useContractWrite(config);
 
   const onMintClick = async () => {
+    console.log('Minting...');
     try {
       await writeAsync?.();
     } catch (error) {
       console.log(error);
     }
   };
-
-  // console.log(config);
 
   return (
     <div>
