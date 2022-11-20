@@ -39,8 +39,8 @@ const Hero = () => {
         <div className="text-lg md:hidden flex mt-8 text-white w-[260px] md:w-[560px] md:h-[63px] items-center justify-center text-center">
           <ConnectWalletButton />
         </div>
-        <div className="flex w-64 justify-center gap-5 pt-6 md:pt-4"></div>
-        <div className=" font-primary ">Mint @ ETH 0.0045</div>
+        <div className="flex w-64 justify-center gap-5  md:pt-4"></div>
+        <div className=" font-primary pt-[2vh] ">Mint @ ETH 0.0045</div>
       </div>
     </div>
   );

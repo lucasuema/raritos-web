@@ -36,13 +36,15 @@ const ConnectWalletButton = () => {
   };
 
   return (
-    <div>
-      {isConnected ? (
-        <button className="bg-red-500" onClick={onMintClick}>
+    <div className="flex flex-col gap-4 mb-2 text-black font-bold  items-center">
+      <ConnectButton chainStatus="none" />
+      {isConnected && (
+        <button
+          className="bg-yellow-300 min-w-[20vw] rounded animate-pulse min-h-[5vh]"
+          onClick={onMintClick}
+        >
           Mint
         </button>
-      ) : (
-        <ConnectButton chainStatus="none" />
       )}
     </div>
   );
