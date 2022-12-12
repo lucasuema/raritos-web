@@ -38,6 +38,9 @@ const Hero = () => {
           <div className=" font-primary pt-[2vh] ">Mint @ ETH 0.0045 ss</div>
         </div> */}
         <div className="text-lg flex-col flex mt-[10%] lg:mt-[5%] text-white w-[260px] md:w-[560px] md:h-[63px] items-center justify-center text-center">
+          <div className=" font-primary pt-[2vh] text-red-500 animate-pulse ">
+            On Goerli test net for now.
+          </div>
           <ConnectWalletButton />
           <div className=" font-primary pt-[2vh] ">Mint @ ETH 0.0045</div>
         </div>
