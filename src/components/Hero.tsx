@@ -11,8 +11,8 @@ import ConnectWalletButton from './ConnectWalletButton';
 
 const Hero = () => {
   return (
-    <div className="flex flex-col h-screen   bg-black ">
-      <div className=" flex flex-col flex-1 justify-center items-center text-center overflow-clip">
+    <div className="flex flex-col h-screen bg-black ">
+      <div className=" flex flex-col  flex-1 justify-center items-center text-center overflow-clip">
         <div className="hidden flex-row gap-4 px-4 sm:flex max-w-[1100px] z-10 ">
           <Image src={one} alt="Center Image" />
           <Image src={two} alt="Center Image" />
@@ -33,14 +33,15 @@ const Hero = () => {
           special, we are unique. 7471 randomly generated with the same DNA. Minting a Rarito is a
           celebration of your inner weirdness.
         </div>
-        <div className="text-lg  hidden md:flex mt-8 text-white w-[260px] md:w-[560px] md:h-[63px] items-center justify-center text-center">
+        {/* <div className="text-lg  hidden flex-col md:flex mt-[10vh] text-white w-[260px] md:w-[560px] md:h-[63px] items-center justify-center text-center">
           <ConnectWalletButton />
-        </div>
-        <div className="text-lg md:hidden flex mt-8 text-white w-[260px] md:w-[560px] md:h-[63px] items-center justify-center text-center">
+          <div className=" font-primary pt-[2vh] ">Mint @ ETH 0.0045 ss</div>
+        </div> */}
+        <div className="text-lg flex-col flex mt-[10%] lg:mt-[5%] text-white w-[260px] md:w-[560px] md:h-[63px] items-center justify-center text-center">
           <ConnectWalletButton />
+          <div className=" font-primary pt-[2vh] ">Mint @ ETH 0.0045</div>
         </div>
-        <div className="flex w-64 justify-center gap-5  md:pt-4"></div>
-        <div className=" font-primary pt-[2vh] ">Mint @ ETH 0.0045</div>
+        {/* <div className="flex w-64 justify-center gap-5  md:pt-4"></div> */}
       </div>
     </div>
   );
